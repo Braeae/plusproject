@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Weather-o-Meter</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/plusw4.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="app-name"> Weather-o-Meter </div>
+
+
+      <form class="search-form" id="search-form">
+        <label class="search-form-label" for="inlineFormInputName2"></label>
+        <input type="text" class="search-form-input" id="search-form-input" placeholder="Enter city">
+           <button type="submit" class="submit-btn">SEARCH</button>
+             <button type="button" class="current-btn" id="currentLocationButton">Current Location
+      </button>
+      </form>
+      
+      
+      
+
+
+
+   
+<div class="cityName" id="city-name">Amsterdam</div>
+<div class="date" id="date"></div>
+
+<div >
+  <p class="temperature" id="temperature">
+    25°
+  </p>
+  </div>
+
+<img class="main-img" src="img/psunny.png" alt="sunny" width="120px"/>
+
+ <div class="weather-text">Partly sunny</div>
+<div class="celsius-fahrenheit">
+
+
+  <span class="celsius" id="celsius"> 
+    <a href id="celsius-link" style="text-decoration: none;">
+       °C 
+    </a>
+   
+  </span>
+
+  <span class="fahrenheit" id="fahrenheit">
+    <a href id="fahrenheit-link" style="text-decoration: none;">
+        / °F 
+    </a>
+  
+    </span>
+</div>
+
+
+
+      <div class="row">
+        <div class="col">
+          <p class="monday">
+            Mon
+            <br />
+            22°
+          </p>
+          <img
+            class="img-mon"
+            src="img/sunnywindy.png"
+            alt="sunnywindy"
+            width="80px"
+          />
+        </div>
+        <div class="col">
+          <p class="tuesday">
+            Tue
+            <br />
+            22°
+          </p>
+          <img
+            class="img-tue"
+            src="img/sunnywindy.png"
+            alt="sunnywindy"
+            width="80px"
+          />
+        </div>
+
+        <div class="col">
+          <p class="wednesday">
+            Wed
+            <br />
+            15°
+          </p>
+          <img class="img-wed" src="img/rainy.png" alt="rainy" width="80px" />
+        </div>
+
+        <div class="col">
+          <p class="thursday">
+            Thu
+            <br />
+            17°
+          </p>
+          <img class="img-thu" src="img/rainy.png" alt="rainy" width="80px" />
+        </div>
+
+        <div class="col">
+          <p class="friday">
+            Fri
+            <br />
+            27°
+          </p>
+          <img class="img-fri" src="img/psunny.png" alt="psunny" width="80px" />
+        </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="src/plusw4.js"></script>
+  </body>
+</html>
