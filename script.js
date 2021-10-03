@@ -44,6 +44,9 @@ function showWeather(response) {
   temperatureClass.innerHTML = `${temperature}°`;
   let city = document.getElementById("city-name");
   city.innerHTML = response.data.name;
+
+  let weatherText = document.getElementById("weatherIs");
+  weatherText.innerHTML = response.data.weather[0].main;
 }
 
 function showPosition(position) {
