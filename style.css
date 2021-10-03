@@ -1,0 +1,132 @@
+input {
+  background-color: #fff;
+  border: 3px solid #ff8ca4;
+  color: rgb(155, 153, 153);
+  width: 300px;
+
+  margin: 0 15px;
+}
+.submit-btn {
+  color: purple;
+  background-color: white;
+  border: 3px solid #ff8ca4;
+  width: 100px;
+  border-radius: 20px;
+  margin: 0 15px;
+}
+.main-img {
+  display: block;
+  margin: 0 auto;
+  border: 4px solid #ffca87;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.app-name {
+  margin: 15px 0;
+  color: #b356c1;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.cityName {
+  font-family: "Roboto Slab", serif;
+  font-size: 26px;
+  color: #ff4672;
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.container {
+  background-color: #eff7f7;
+  display: block;
+  margin: 0 auto;
+  box-sizing: content-box;
+  margin-top: 40px;
+  width: 700px;
+  height: 610px;
+  max-width: 100%;
+  border: 5px solid #88d2cb;
+  border-radius: 10px;
+  box-shadow: 5px 2px 5px rgb(194, 192, 192);
+}
+
+.current-btn {
+  color: purple;
+  display: inline;
+  font-size: 13px;
+  background-color: white;
+  border: 3px solid #ff8ca4;
+  width: 120px;
+  border-radius: 20px;
+  padding: 4px;
+  margin: 0 8px;
+}
+
+.date {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  color: #b356c1;
+  display: block;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.temperature {
+  font-family: "Roboto Slab", serif;
+  font-size: 26px;
+  color: #ff4672;
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.weather-text {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #ff4672;
+  display: block;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.celsius-fahrenheit {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ff4672;
+  display: block;
+  text-align: center;
+  margin: 8px 0;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  color: #ff4672;
+}
+
+#celsius-link:hover,
+#fahrenheit-link:hover {
+  color: purple;
+}
+
+.col {
+  margin: 8px 16px;
+  border: 3px solid #efdbf2;
+  text-align: center;
+}
+
+.monday,
+.tuesday,
+.wednesday,
+.thursday,
+.friday {
+  color: #b356c1;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
