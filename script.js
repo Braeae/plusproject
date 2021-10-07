@@ -2,7 +2,15 @@ let now = new Date();
 
 let date = document.querySelector(".date");
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 let day = days[now.getDay()];
 let hour = now.getHours();
 let minute = now.getMinutes();

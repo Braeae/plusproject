@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "img",
+		"path": "../../SheCodes Plus Project/img"
+	},
+	{
+		"name": "plusproject",
+		"path": "."
+	}
+],
+  "settings": {}
+}
