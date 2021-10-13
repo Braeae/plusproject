@@ -20,65 +20,64 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-   
-
-  
+  <body id="body">
+    
     <div class="container">
       <div class="app-name"> Weather-o-Meter </div>
 
 
-      <form class="search-form" id="search-form">
+      <form class="search-form" id="search-form" autocomplete="off">
         <label class="search-form-label" for="inlineFormInputName2"></label>
         <input type="text" class="search-form-input" id="search-form-input" placeholder="Enter city">
            <button type="submit" class="submit-btn">SEARCH</button>
              <button type="button" class="current-btn" id="currentLocationButton">Current Location
       </button>
       </form>
-      
-      
-      
-
-
-
-   
-<div class="cityName" id="city-name">Amsterdam</div>
-<div class="date" id="date"></div>
-
-<div >
-  <p class="temperature" id="temperature">
-    25°
-  </p>
-  </div>
-
-<img class="main-img" src="img/psunny.png" alt="sunny" width="120px"/>
-
- <div class="weather-text">  
-   <p id="weatherIs">
-      Partly sunny
-   </p></div>
-<div class="celsius-fahrenheit">
-
-
-  <span class="celsius" id="celsius"> 
-    <a href id="celsius-link" style="text-decoration: none;">
-       °C 
-    </a>
-   
-  </span>
-
-  <span class="fahrenheit" id="fahrenheit">
-    <a href id="fahrenheit-link" style="text-decoration: none;">
-        / °F 
-    </a>
-  
-    </span>
-</div>
-
-
 
       <div class="row">
         <div class="col">
+
+        </div>
+        
+      </div>
+  
+
+      <div class="row justify-content-between" id="rowFirstCol">
+
+          <div class="col-md-4 align-self-center" id="firstCol">
+              <p class="cityName" id="city-name">Amsterdam</p>
+
+              <p class="date" id="date"></p>
+              <p id="weatherIs">Partly sunny </p>
+          </div>
+
+          <div class="col-md-4 align-self-center" id="firstCol">
+          
+            
+          
+           
+              <img class="main-img" id="mainImg" src="img/psunny.png" alt="sunny" width="120px"/>   
+          </div>
+
+          <div class="col-md-4 align-self-center" id="firstCol">
+              
+              <strong class="temperature" id="temperature"> </strong>
+                <span class="units">
+                 
+                  <a href="#" id="celsiusLink" class="active">°C</a> |
+                  <a href="#" id="fahrenheitLink">°F</a></span>
+              
+               <ul> 
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> m/h</li>
+                <li>Feels Like: <span id="feels"> </span>° </li>
+              </ul>
+              </div>
+</div>
+
+
+      <div class="row>
+        <div class="col flex justify-content-center" id="weekDays">
           <p class="monday">
             Mon
             <br />
@@ -87,11 +86,12 @@
           <img
             class="img-mon"
             src="img/sunnywindy.png"
+            id = "sunnyWindy"
             alt="sunnywindy"
             width="80px"
           />
         </div>
-        <div class="col">
+        <div class="col flex justify-content-center" id="weekDays">
           <p class="tuesday">
             Tue
             <br />
@@ -105,7 +105,7 @@
           />
         </div>
 
-        <div class="col">
+        <div class="col flex justify-content-center" id="weekDays">
           <p class="wednesday">
             Wed
             <br />
@@ -114,7 +114,7 @@
           <img class="img-wed" src="img/rainy.png" alt="rainy" width="80px" />
         </div>
 
-        <div class="col">
+        <div class="col flex justify-content-center" id="weekDays">
           <p class="thursday">
             Thu
             <br />
@@ -123,7 +123,7 @@
           <img class="img-thu" src="img/rainy.png" alt="rainy" width="80px" />
         </div>
 
-        <div class="col">
+        <div class="col flex justify-content-center" id="weekDays">
           <p class="friday">
             Fri
             <br />
@@ -132,15 +132,21 @@
           <img class="img-fri" src="img/psunny.png" alt="psunny" width="80px" />
         </div>
 
+
         </div>
-      </div>
-        <p id="codeLink"> <strong>
+     
+
+      <p id="codeLink" id="weekDays"> <strong>
          <a href="https://github.com/Braeae/plusproject" target="_blank">Open-source code</a>
          by Busra 
       </strong>
        
       </p>
     </div>
+
+    </div>
+
+
     <script src="script.js"></script>
   </body>
 </html>

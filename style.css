@@ -1,11 +1,3 @@
-body {
-  background: linear-gradient(
-    109.6deg,
-    rgb(245, 239, 249) 30.1%,
-    rgb(207, 211, 236) 100.2%
-  );
-}
-
 input {
   background-color: #fff;
   border: 3px solid #ff8ca4;
@@ -13,6 +5,34 @@ input {
   width: 300px;
 
   margin: 0 15px;
+}
+body {
+  background: linear-gradient(
+    109.6deg,
+    rgb(245, 239, 249) 30.1%,
+    rgb(207, 211, 236) 100.2%
+  );
+}
+strong {
+  color: #ff4672;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 2px;
+
+  color: #b356c1;
+  font-weight: 500;
+}
+
+form {
+  padding-bottom: 5px;
 }
 
 .submit-btn {
@@ -32,7 +52,7 @@ input {
 }
 
 .app-name {
-  margin: 10px 14px;
+  margin: 12px 14px;
   color: #b356c1;
   font-weight: 600;
   font-size: 20px;
@@ -42,7 +62,7 @@ input {
 
 .cityName {
   font-family: "Roboto Slab", serif;
-  font-size: 26px;
+  font-size: 30px;
   color: #ff4672;
   display: block;
   text-align: center;
@@ -53,7 +73,7 @@ input {
   background-color: #eff7f7;
   display: block;
   margin: 0 auto;
-  box-sizing: content-box;
+
   margin-top: 40px;
   width: 700px;
   height: 610px;
@@ -86,21 +106,11 @@ input {
 
 .temperature {
   font-family: "Roboto Slab", serif;
-  font-size: 26px;
+  font-size: 16px;
   color: #ff4672;
-  display: block;
-  text-align: center;
+  display: inline;
+  text-align: left;
   margin: 10px 0;
-}
-
-.weather-text {
-  font-family: "Roboto Slab", serif;
-  font-size: 18px;
-  font-weight: 300;
-  color: #ff4672;
-  display: block;
-  text-align: center;
-  margin: 8px 0;
 }
 
 .celsius-fahrenheit {
@@ -113,20 +123,12 @@ input {
   margin: 8px 0;
 }
 
-#celsius-link,
-#fahrenheit-link {
+.units {
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 300;
   color: #ff4672;
-}
-
-#celsius-link:hover,
-#fahrenheit-link:hover {
-  color: purple;
-}
-
-.col {
-  margin: 8px 16px;
-  border: 3px solid #efdbf2;
-  text-align: center;
 }
 
 .monday,
@@ -137,17 +139,53 @@ input {
   color: #b356c1;
   font-weight: 500;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
+#celsiusLink,
+#fahrenheitLink,
+#weatherUnit {
+  text-decoration: none;
+  color: #ff4672;
+  display: inline;
+}
+
+#celsius-link:hover,
+#fahrenheit-link:hover {
+  color: purple;
+}
+
 #codeLink {
   text-align: center;
   margin: 0 auto;
   padding: 12px;
   font-size: 12px;
 }
-#codeLink {
+
+#rowFirstCol {
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+#unit {
+  text-decoration: none;
+  color: #ff4672;
+  display: inline;
+}
+
+#weekDays {
+  display: inline-block;
+  flex-wrap: wrap;
+  margin: 8px 16px;
+  border: 3px solid #efdbf2;
   text-align: center;
-  margin: 0 auto;
-  padding: 12px;
-  font-size: 12px;
+}
+#weatherIs {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #ff4672;
+  display: block;
+  text-align: center;
+  margin: 8px 0;
 }

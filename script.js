@@ -17,20 +17,6 @@ let minute = now.getMinutes();
 
 date.innerHTML = `${day}, ${hour}:${minute}`;
 
-function showFahrenheit(event) {
-  event.preventDefault();
-}
-
-function showCelsius(event) {
-  event.preventDefault();
-}
-
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", showFahrenheit);
-
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", showCelsius);
-
 function search(event) {
   event.preventDefault();
   let city = document.getElementById("city-name");
@@ -47,14 +33,35 @@ function searchCity(city) {
 }
 
 function showWeather(response) {
-  let temperatureClass = document.querySelector("#temperature");
-  let temperature = Math.round(response.data.main.temp);
-  temperatureClass.innerHTML = `${temperature}°`;
+  console.log(response.data);
+  let temperature = document.querySelector("#temperature");
   let city = document.getElementById("city-name");
+  let weatherText = document.getElementById("weatherIs");
+  let humidity = document.getElementById("humidity");
+  let windSpeed = document.getElementById("wind");
+  let feelsLike = document.getElementById("feels");
+  let weatherImage = document.querySelector("#mainImg");
+  let partlySunny = document.querySelector("#sunnyWindy");
+
+  celsiusTemperature = response.data.main.temp;
+
+  temperature.innerHTML = Math.round(celsiusTemperature);
   city.innerHTML = response.data.name;
 
-  let weatherText = document.getElementById("weatherIs");
   weatherText.innerHTML = response.data.weather[0].main;
+  humidity.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = response.data.wind.speed;
+  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+
+  if (temperature.innerHTML < 15) {
+    weatherImage.src = "img/sunnywindy.png";
+  } else {
+    weatherImage.src = "img/psunny.png";
+  }
+
+  if (temperature.innerHTML < 15 && weatherText.innerHTML === "Rain") {
+    weatherImage.src = "img/rainy.png";
+  }
 }
 
 function showPosition(position) {
@@ -70,11 +77,38 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+function showFahrenheit(event) {
+  event.preventDefault();
+
+  let temperature = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let form = document.getElementById("search-form");
 form.addEventListener("submit", search);
+
+let celsiusLink = document.querySelector("#celsiusLink");
+
+celsiusLink.addEventListener("click", showCelsius);
+
+let fahrenheitLink = document.querySelector("#fahrenheitLink");
+
+fahrenheitLink.addEventListener("click", showFahrenheit);
 
 let currentButton = document
   .querySelector("#currentLocationButton")
   .addEventListener("click", getCurrentLocation);
 
 navigator.geolocation.getCurrentPosition(showPosition);
+
+searchCity("Amsterdam");
