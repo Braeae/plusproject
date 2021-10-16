@@ -46,9 +46,8 @@ form {
 .main-img {
   display: block;
   margin: 0 auto;
-  border: 4px solid #ffca80;
-  border-radius: 8px;
-  padding: 6px;
+
+  box-sizing: border-box;
 }
 
 .app-name {

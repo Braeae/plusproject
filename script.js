@@ -53,7 +53,7 @@ function showWeather(response) {
   windSpeed.innerHTML = response.data.wind.speed;
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
 
-  if (temperature.innerHTML < 15) {
+  if (temperature.innerHTML < 15 || weatherText.innerHTML === "Clouds") {
     weatherImage.src = "img/cloud.png";
   } else {
     weatherImage.src = "img/sunny.png";
