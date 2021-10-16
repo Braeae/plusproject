@@ -54,13 +54,19 @@ function showWeather(response) {
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
 
   if (temperature.innerHTML < 15) {
-    weatherImage.src = "img/sunnywindy.png";
+    weatherImage.src = "img/cloud.png";
   } else {
-    weatherImage.src = "img/psunny.png";
+    weatherImage.src = "img/sunny.png";
   }
 
   if (temperature.innerHTML < 15 && weatherText.innerHTML === "Rain") {
-    weatherImage.src = "img/rainy.png";
+    weatherImage.src = "img/rain.png";
+  }
+  if (temperature.innerHTML > 15 && weatherText.innerHTML === "Clear") {
+    weatherImage.src = "img/sunny.png";
+  }
+  if (temperature.innerHTML < 0 || weatherText.innerHTML === "Snow") {
+    weatherImage.src = "img/snow.png";
   }
 }
 
