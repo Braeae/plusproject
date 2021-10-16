@@ -123,6 +123,10 @@ form {
   margin: 8px 0;
 }
 
+.weatherImg {
+  padding: 10px 2px;
+}
+
 .units {
   text-decoration: none;
   font-family: "Roboto Slab", serif;
