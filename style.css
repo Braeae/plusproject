@@ -60,7 +60,7 @@ form {
 }
 
 .cityName {
-  font-family: "Roboto Slab", serif;
+  font-family: "Nunito", "Courier New", Courier, monospace;
   font-size: 30px;
   color: #ff4672;
   display: block;
