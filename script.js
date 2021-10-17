@@ -110,6 +110,8 @@ function showWeather(response) {
   if (temperature.innerHTML < 0 || weatherText.innerHTML === "Snow") {
     weatherImage.src = "img/snow.png";
   }
+
+  getForecast(response.data.coord);
 }
 
 function showPosition(position) {
