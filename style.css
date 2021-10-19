@@ -194,8 +194,10 @@ form {
   border: 3px solid #efdbf2;
   border-radius: 4px;
   box-sizing: border-box;
+  width: 14.7%;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-top: 6px;
+  padding-bottom: 25px;
   text-align: center;
 }
 
