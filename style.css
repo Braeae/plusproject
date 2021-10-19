@@ -166,8 +166,8 @@ form {
   display: inline;
 }
 
-#celsius-link :hover,
-#fahrenheit-link :hover {
+#celsiusLink:hover,
+#fahrenheitLink:hover {
   color: purple;
 }
 
@@ -180,7 +180,7 @@ form {
 
 #rowFirstCol {
   margin-block-start: 40px;
-  margin-block-end: 100px;
+  margin-block-end: 120px;
 }
 
 #unit {
@@ -189,17 +189,18 @@ form {
   display: inline;
 }
 
-#weekDays {
+#forecastDays {
   flex-wrap: wrap;
   border: 3px solid #efdbf2;
   border-radius: 4px;
   box-sizing: border-box;
-  margin: 4px auto;
+  margin: 0 auto;
+  padding-bottom: 20px;
   text-align: center;
 }
 
-#weekDays:hover {
-  color: purple;
+#forecastDays:hover {
+  background-color: #efdbf2;
 }
 
 #weatherIs {

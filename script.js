@@ -50,7 +50,7 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#weekDays");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row justify-content-center">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       let icon = "";
@@ -73,7 +73,7 @@ function displayForecast(response) {
         forecastHTML +
         `
 
-          <div class="col-md-2">
+          <div class="col-md-2 no-gutters" id="forecastDays">
           <p class="weather-forecast-date">${formatDay(
             forecastDay.dt
           )} <br />  <span class="weather-forecast-temperature-max"> ${Math.round(
@@ -112,7 +112,7 @@ function showWeather(response) {
   let windSpeed = document.getElementById("wind");
   let feelsLike = document.getElementById("feels");
   let weatherImage = document.querySelector("#mainImg");
-  let partlySunny = document.querySelector("#sunnyWindy");
+  let currentDate = document.querySelector("#date");
 
   celsiusTemperature = response.data.main.temp;
 
@@ -123,6 +123,7 @@ function showWeather(response) {
   humidity.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = response.data.wind.speed;
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+  currentDate.innerHTML = formatDate(response.data.dt * 1000);
 
   if (temperature.innerHTML < 15 || weatherText.innerHTML === "Clouds") {
     weatherImage.src = "img/cloud.png";
