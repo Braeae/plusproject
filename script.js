@@ -61,7 +61,7 @@ function displayForecast(response) {
       if (forecastDay.temp.day > 20) {
         icon = "img/sunny.png";
       }
-      if (forecastDay.temp.day =< 0) {
+      if (forecastDay.temp.day <= 0) {
         icon = "img/snow.png";
       } else {
         icon = "img/cloud.png";
