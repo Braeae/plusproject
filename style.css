@@ -60,7 +60,7 @@ form {
 }
 
 .cityName {
-  font-family: "Nunito", Courier, monospace;
+  font-family: "Nunito", "Courier New", Courier, monospace;
   font-size: 30px;
   color: #ff4672;
   display: block;
@@ -74,7 +74,7 @@ form {
   margin: 0 auto;
 
   margin-top: 40px;
-  width: 720px;
+  width: 800px;
   height: 600px;
   max-width: 100%;
   border: 5px solid #88d2cb;
@@ -122,10 +122,6 @@ form {
   margin: 8px 0;
 }
 
-.weatherImg {
-  padding: 10px 2px;
-}
-
 .units {
   text-decoration: none;
   font-family: "Roboto Slab", serif;
@@ -139,7 +135,23 @@ form {
 .wednesday,
 .thursday,
 .friday,
-.saturday {
+.saturday,
+.weather-forecast-date {
+  color: #b356c1;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-temperature-max,
+.weather-forecast-temperature-min {
+  color: purple;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#daysOfWeek {
   color: #b356c1;
   font-weight: 500;
   margin-top: 5px;
@@ -154,8 +166,8 @@ form {
   display: inline;
 }
 
-#celsius-link:hover,
-#fahrenheit-link:hover {
+#celsius-link :hover,
+#fahrenheit-link :hover {
   color: purple;
 }
 
@@ -164,13 +176,6 @@ form {
   margin: 0 auto;
   padding: 12px;
   font-size: 12px;
-}
-
-#daysOfWeek {
-  color: #b356c1;
-  font-weight: 500;
-  margin-top: 5px;
-  margin-bottom: 10px;
 }
 
 #rowFirstCol {
@@ -192,6 +197,11 @@ form {
   margin: 4px auto;
   text-align: center;
 }
+
+#weekDays:hover {
+  color: purple;
+}
+
 #weatherIs {
   font-family: "Roboto Slab", serif;
   font-size: 18px;

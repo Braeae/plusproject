@@ -63,8 +63,10 @@ function displayForecast(response) {
       }
       if (forecastDay.temp.day <= 0) {
         icon = "img/snow.png";
-      } else {
-        icon = "img/cloud.png";
+      }
+
+      if (forecastDay.rain > 0) {
+        icon = "img/rain.png";
       }
 
       forecastHTML =
@@ -81,8 +83,8 @@ function displayForecast(response) {
             forecastDay.temp.min
           )}° </span> </p>
           <img
-            src="img/sunny.png"
-            alt="sunny"
+            src="${icon}";
+            alt="weatherIcon"
             class="weatherImg"
             width="60px"
           />
