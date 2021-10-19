@@ -1,21 +1,34 @@
-let now = new Date();
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-let date = document.querySelector(".date");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let hour = now.getHours();
-let minute = now.getMinutes();
+function formatDay(timestamp) {
+  let realDate = new Date(timestamp * 1000);
+  let day = realDate.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-date.innerHTML = `${day}, ${hour}:${minute}`;
+  return days[day];
+}
 
 function search(event) {
   event.preventDefault();
@@ -40,6 +53,20 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
+      let icon = "";
+
+      if (forecastDay.temp.day < 20) {
+        icon = "img/cloud.png";
+      }
+      if (forecastDay.temp.day > 20) {
+        icon = "img/sunny.png";
+      }
+      if (forecastDay.temp.day =< 0) {
+        icon = "img/snow.png";
+      } else {
+        icon = "img/cloud.png";
+      }
+
       forecastHTML =
         forecastHTML +
         `
