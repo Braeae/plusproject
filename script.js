@@ -131,7 +131,7 @@ function showWeather(response) {
     weatherImage.src = "img/sunny.png";
   }
 
-  if (temperature.innerHTML < 15 && weatherText.innerHTML === "Rain") {
+  if (temperature.innerHTML < 25 && weatherText.innerHTML === "Rain") {
     weatherImage.src = "img/rain.png";
   }
   if (temperature.innerHTML > 15 && weatherText.innerHTML === "Clear") {

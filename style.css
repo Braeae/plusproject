@@ -3,9 +3,10 @@ input {
   border: 3px solid #ff8ca4;
   color: rgb(155, 153, 153);
   width: 300px;
-
+  outline: none;
   margin: 0 15px;
 }
+
 body {
   background: linear-gradient(
     109.6deg,
@@ -53,7 +54,7 @@ form {
 .app-name {
   margin: 12px 14px;
   color: #b356c1;
-  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
   font-size: 20px;
   position: relative;
   text-align: left;
@@ -105,7 +106,8 @@ form {
 
 .temperature {
   font-family: "Roboto Slab", serif;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 28px;
   color: #ff4672;
   display: inline;
   text-align: left;
@@ -164,6 +166,7 @@ form {
   text-decoration: none;
   color: #ff4672;
   display: inline;
+  font-size: 16px;
 }
 
 #celsiusLink:hover,
