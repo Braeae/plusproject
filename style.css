@@ -1,3 +1,15 @@
+body {
+  background: linear-gradient(
+    109.6deg,
+    rgb(245, 239, 249) 30.1%,
+    rgb(207, 211, 236) 100.2%
+  );
+}
+
+form {
+  padding-bottom: 5px;
+}
+
 input {
   background-color: #fff;
   border: 3px solid #ff8ca4;
@@ -7,20 +19,8 @@ input {
   margin: 0 15px;
 }
 
-body {
-  background: linear-gradient(
-    109.6deg,
-    rgb(245, 239, 249) 30.1%,
-    rgb(207, 211, 236) 100.2%
-  );
-}
 strong {
   color: #ff4672;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 li {
@@ -31,24 +31,9 @@ li {
   color: #b356c1;
   font-weight: 500;
 }
-
-form {
-  padding-bottom: 5px;
-}
-
-.submit-btn {
-  color: purple;
-  background-color: white;
-  border: 3px solid #ff8ca4;
-  width: 100px;
-  border-radius: 20px;
-  margin: 0 15px;
-}
-.main-img {
-  display: block;
-  margin: 0 auto;
-
-  box-sizing: border-box;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .app-name {
@@ -93,6 +78,21 @@ form {
   border-radius: 20px;
   padding: 4px;
   margin: 0 8px;
+}
+
+.submit-btn {
+  color: purple;
+  background-color: white;
+  border: 3px solid #ff8ca4;
+  width: 100px;
+  border-radius: 20px;
+  margin: 0 15px;
+}
+.main-img {
+  display: block;
+  margin: 0 auto;
+
+  box-sizing: border-box;
 }
 
 .date {
@@ -153,13 +153,6 @@ form {
   margin-bottom: 10px;
 }
 
-#daysOfWeek {
-  color: #b356c1;
-  font-weight: 500;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
 #celsiusLink,
 #fahrenheitLink,
 #weatherUnit {
@@ -179,6 +172,13 @@ form {
   margin: 0 auto;
   padding: 12px;
   font-size: 12px;
+}
+
+#daysOfWeek {
+  color: #b356c1;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 #rowFirstCol {
