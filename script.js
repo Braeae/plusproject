@@ -104,7 +104,6 @@ function getForecast(coordinates) {
 }
 
 function showWeather(response) {
-  console.log(response.data);
   let temperature = document.querySelector("#temperature");
   let city = document.getElementById("city-name");
   let weatherText = document.getElementById("weatherIs");
